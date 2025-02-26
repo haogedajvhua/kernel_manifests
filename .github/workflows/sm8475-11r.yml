@@ -52,7 +52,7 @@ jobs:
         repo sync -j$(nproc --all)
         sed -i 's/export REPACK_IMG=true/export REPACK_IMG=false/Ig' kernel_platform/oplus/build/oplus_setup.sh
         sed -i 's/ -dirty$//' kernel_platform/common/scripts/setlocalversion
-        sed -i 's/EXTRAVERSION =/EXTRAVERSION =-XiGuan/I' kernel_platform/common/Makefile
+        # sed -i 's/EXTRAVERSION =/EXTRAVERSION =-XiGuan/I' kernel_platform/common/Makefile
         # sed -i '1i CONFIG_LOCALVERSION="-XiGuan"' kernel_platform/common/arch/arm64/configs/gki_defconfig
         
     - name: 添加KernelSU Next
